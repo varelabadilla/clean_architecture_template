@@ -28,7 +28,7 @@ The alternative (horizontal organization by type: all commands in one folder, al
 
 ## Folder Structure Per Feature
 
-```
+```plaintext
 Features/
 ├─ Orders/
 │  ├─ Commands/
@@ -79,10 +79,12 @@ Features/
 ## When to Create a New Feature Folder
 
 Create a new folder when:
+
 - A new aggregate is introduced (`Products/`, `Invoices/`)
 - A sufficiently distinct business capability warrants separation (`Reporting/`, `Notifications/`)
 
 Do **not** create a folder for:
+
 - A single command with no related queries
 - Infrastructure concerns (batch jobs, scheduled tasks)
 

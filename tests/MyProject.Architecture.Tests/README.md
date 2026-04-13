@@ -29,7 +29,7 @@ With architecture tests running in CI on every pull request, dependency rule vio
 
 ## Recommended Project Structure
 
-```
+```plaintext
 MyProject.Architecture.Tests/
 ├─ LayerDependencyTests.cs     // the most important tests
 ├─ NamingConventionTests.cs    // optional: validate naming rules

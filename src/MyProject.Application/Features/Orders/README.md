@@ -11,6 +11,7 @@ This is a **reference implementation** folder — it serves as the pattern that 
 ## Subfolder Responsibilities
 
 ### Commands/
+
 Input models for write operations. A command expresses **intent to change state**.
 
 ```csharp
@@ -32,6 +33,7 @@ public record OrderItemRequest(
 ```
 
 ### Queries/
+
 Input models for read operations. A query expresses **intent to read data**.
 
 ```csharp
@@ -46,6 +48,7 @@ public record ListOrdersByCustomerQuery(
 ```
 
 ### Handlers/
+
 The classes that execute commands and queries. One handler per command or query.
 
 ```csharp
@@ -92,6 +95,7 @@ public class PlaceOrderCommandHandler
 ```
 
 ### Validators/
+
 FluentValidation validators for commands. Queries rarely need validators unless they have complex filter constraints.
 
 ```csharp
@@ -122,6 +126,7 @@ public class PlaceOrderCommandValidator : AbstractValidator<PlaceOrderCommand>
 ```
 
 ### Mappings/
+
 AutoMapper or Mapster profiles for mapping domain objects to DTOs.
 
 ```csharp
@@ -145,6 +150,7 @@ public class OrderMappingProfile : Profile
 ```
 
 ### EventHandlers/ (optional)
+
 Handlers that react to domain events raised during command execution.
 
 ```csharp
@@ -174,7 +180,7 @@ public class SendOrderConfirmationOnOrderPlacedHandler
 
 ## File Naming Summary
 
-```
+```plaintext
 Commands/
   PlaceOrderCommand.cs
   CancelOrderCommand.cs

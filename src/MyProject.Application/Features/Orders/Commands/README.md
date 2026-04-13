@@ -8,7 +8,7 @@ Contains the **input models for write operations** on the Order aggregate. Each 
 
 `{Verb}{Aggregate}Command` — verb first, aggregate second.
 
-```
+```plaintext
 PlaceOrderCommand
 CancelOrderCommand
 ConfirmOrderCommand
@@ -44,7 +44,7 @@ public record OrderItemRequest(Guid ProductId, int Quantity);
 
 ## Example files
 
-```
+```plaintext
 PlaceOrderCommand.cs
 CancelOrderCommand.cs
 ConfirmOrderCommand.cs

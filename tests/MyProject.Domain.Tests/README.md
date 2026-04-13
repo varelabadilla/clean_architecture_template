@@ -31,7 +31,7 @@ Because the Domain layer has zero infrastructure dependencies, these tests are f
 
 ## Recommended Project Structure
 
-```
+```plaintext
 MyProject.Domain.Tests/
 ├─ Entities/
 │  ├─ OrderTests.cs
@@ -62,6 +62,7 @@ MyProject.Domain.Tests/
 ## Test Examples
 
 ### Entity invariant test
+
 ```csharp
 public class OrderTests
 {
@@ -128,6 +129,7 @@ public class OrderTests
 ```
 
 ### Value object test
+
 ```csharp
 public class MoneyTests
 {
@@ -166,6 +168,7 @@ public class MoneyTests
 ```
 
 ### Test data builder (Object Mother pattern)
+
 ```csharp
 public class OrderBuilder
 {

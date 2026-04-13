@@ -8,7 +8,7 @@ Contains **AutoMapper or Mapster mapping profiles** that define how Order domain
 
 Feature name + `MappingProfile`:
 
-```
+```plaintext
 OrderMappingProfile
 ```
 
@@ -63,6 +63,6 @@ public class OrderMappingProfile : Profile
 
 ## Example files
 
-```
+```plaintext
 OrderMappingProfile.cs
 ```

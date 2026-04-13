@@ -36,6 +36,7 @@ This folder contains the **concrete implementations of the service interfaces** 
 ## Common Implementations
 
 ### SystemDateTimeProvider
+
 ```csharp
 public class SystemDateTimeProvider : IDateTimeProvider
 {
@@ -45,6 +46,7 @@ public class SystemDateTimeProvider : IDateTimeProvider
 ```
 
 ### HttpCurrentUserContext
+
 ```csharp
 public class HttpCurrentUserContext : ICurrentUserContext
 {
@@ -73,6 +75,7 @@ public class HttpCurrentUserContext : ICurrentUserContext
 ```
 
 ### NullEmailService (for development)
+
 ```csharp
 // Logs emails instead of sending them — useful in local development
 public class NullEmailService : IEmailService
@@ -96,11 +99,13 @@ public class NullEmailService : IEmailService
 ## Important Notes
 
 - Register the appropriate implementation based on environment in `DependencyInjection.cs`:
+
 ```csharp
 if (environment.IsDevelopment())
     services.AddScoped<IEmailService, NullEmailService>();
 else
     services.AddScoped<IEmailService, SendGridEmailService>();
 ```
+
 - Keep implementations **thin adapters**. If a service implementation grows complex, it likely contains logic that belongs in the Application layer.
 - In Java/Spring, these are `@Service` beans that implement the domain/application interfaces, registered automatically via component scanning.

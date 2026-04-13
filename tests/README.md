@@ -22,7 +22,7 @@ This folder contains five test projects, each targeting a distinct layer and tes
 
 ## Testing Pyramid
 
-```
+```plaintext
         [Api.Tests]          ← Fewest, slowest, most realistic
        /             \
   [Infra.Tests]       \      ← Integration tests, real DB/services
@@ -39,6 +39,7 @@ Invest most heavily in Domain and Application unit tests. They are fast, reliabl
 ## Shared Test Utilities
 
 Consider a `MyProject.Tests.Common` project (not shown in the structure by default) for:
+
 - Test data builders / Object Mother pattern
 - Shared fakes and stubs (`FakeEmailService`, `FakeDateTimeProvider`)
 - Base test class setups
@@ -49,6 +50,7 @@ Consider a `MyProject.Tests.Common` project (not shown in the structure by defau
 ## Recommended Testing Libraries
 
 ### .NET
+
 | Concern | Library |
 | --- | --- |
 | Test runner | xUnit |
@@ -59,6 +61,7 @@ Consider a `MyProject.Tests.Common` project (not shown in the structure by defau
 | API testing | `WebApplicationFactory<Program>` |
 
 ### Java
+
 | Concern | Library |
 | --- | --- |
 | Test runner | JUnit 5 |

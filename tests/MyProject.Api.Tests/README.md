@@ -29,7 +29,7 @@ These tests catch problems that unit tests cannot: incorrect route configuration
 
 ## Recommended Project Structure
 
-```
+```plaintext
 MyProject.Api.Tests/
 ├─ Controllers/
 │  ├─ OrdersControllerTests.cs

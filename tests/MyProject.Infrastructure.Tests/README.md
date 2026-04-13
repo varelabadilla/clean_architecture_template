@@ -28,7 +28,7 @@ These tests catch problems that unit tests cannot: incorrect EF Core configurati
 
 ## Recommended Project Structure
 
-```
+```plaintext
 MyProject.Infrastructure.Tests/
 ├─ Persistence/
 │  ├─ Repositories/

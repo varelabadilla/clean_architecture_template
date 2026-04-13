@@ -8,7 +8,7 @@ Contains the **input models for read operations** on the Order aggregate. Each q
 
 `{Get|List|Find}{Resource}{OptionalFilter}Query`
 
-```
+```plaintext
 GetOrderByIdQuery
 ListOrdersByCustomerQuery
 GetOrderStatusQuery
@@ -50,7 +50,7 @@ public record ListOrdersByCustomerQuery(
 
 ## Example files
 
-```
+```plaintext
 GetOrderByIdQuery.cs
 ListOrdersByCustomerQuery.cs
 GetOrderStatusQuery.cs

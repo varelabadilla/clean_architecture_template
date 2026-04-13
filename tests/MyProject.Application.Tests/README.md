@@ -28,7 +28,7 @@ These are unit tests. Repositories and external services are replaced with fakes
 
 ## Recommended Project Structure
 
-```
+```plaintext
 MyProject.Application.Tests/
 ├─ Features/
 │  └─ Orders/
@@ -53,6 +53,7 @@ MyProject.Application.Tests/
 ## Naming Conventions
 
 Same as Domain.Tests:
+
 - Test class: `{HandlerOrClass}Tests`
 - Method: `{Method}_{Condition}_{ExpectedOutcome}`
 
@@ -61,6 +62,7 @@ Same as Domain.Tests:
 ## Test Examples
 
 ### Command handler test
+
 ```csharp
 public class PlaceOrderCommandHandlerTests
 {
@@ -119,6 +121,7 @@ public class PlaceOrderCommandHandlerTests
 ```
 
 ### Validator test
+
 ```csharp
 public class PlaceOrderCommandValidatorTests
 {
@@ -159,6 +162,7 @@ public class PlaceOrderCommandValidatorTests
 ```
 
 ### Fake repository
+
 ```csharp
 // Fakes are preferred over mocks for stateful repositories
 public class FakeOrderRepository : IOrderRepository

@@ -8,7 +8,7 @@ Contains the **handler classes** that execute commands and queries. Each handler
 
 Full command or query name + `Handler`:
 
-```
+```plaintext
 PlaceOrderCommandHandler
 CancelOrderCommandHandler
 GetOrderByIdQueryHandler
@@ -61,7 +61,7 @@ public async Task<Result<Guid>> Handle(PlaceOrderCommand command, CancellationTo
 
 ## Example files
 
-```
+```plaintext
 PlaceOrderCommandHandler.cs
 CancelOrderCommandHandler.cs
 ConfirmOrderCommandHandler.cs
