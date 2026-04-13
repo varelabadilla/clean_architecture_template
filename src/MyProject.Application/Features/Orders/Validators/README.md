@@ -8,7 +8,7 @@ Contains **FluentValidation validator classes** for Order commands. Validators e
 
 Command or query name + `Validator`:
 
-```
+```plaintext
 PlaceOrderCommandValidator
 CancelOrderCommandValidator
 UpdateShippingAddressCommandValidator
@@ -63,7 +63,7 @@ public class PlaceOrderCommandValidator : AbstractValidator<PlaceOrderCommand>
 
 ## Example files
 
-```
+```plaintext
 PlaceOrderCommandValidator.cs
 CancelOrderCommandValidator.cs
 UpdateShippingAddressCommandValidator.cs

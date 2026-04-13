@@ -134,7 +134,7 @@ public interface IOrderRepository
 The rule is firm: **only aggregate roots get repositories**. `OrderItem` is a child entity of `Order`. You never retrieve an `OrderItem` independently — you go through its parent `Order`.
 
 | Aggregate root | Has repository | Child entities | No repository |
-| --- | --- | --- |---|
+| --- | --- | --- | --- |
 | `Order` | `IOrderRepository` | `OrderItem` | — |
 | `Customer` | `ICustomerRepository` | `CustomerAddress` | — |
 | `Product` | `IProductRepository` | `ProductVariant` | — |
