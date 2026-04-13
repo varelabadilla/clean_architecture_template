@@ -319,9 +319,29 @@ void domain_should_not_depend_on_infrastructure() {
 
 ---
 
+## Which version should I use?
+
+**Use v0.2 if:**
+
+- You are building a single deployable application (monolith or modular monolith)
+- Your team is small or the domain boundaries are not yet clear
+- You want the simplest possible structure that still follows Clean Architecture correctly
+
+**Use v0.3 if:**
+
+- Each service is an independent deployable unit with its own repository and database
+- Services need to communicate asynchronously via a message broker
+- You need guaranteed event delivery across service boundaries (Outbox pattern)
+- You are building a new service in an existing microservices ecosystem
+
+> v0.3 is built on top of v0.2. Every principle, folder, and decision from v0.2 applies inside each microservice. v0.3 adds only what is necessary for the distributed context — it does not replace v0.2.
+
+---
+
 ## Version History
 
 | Version | Description |
 | --- | --- |
 | v0.1 | Initial structure suggested: Domain, Application, Infrastructure, Api |
 | v0.2 | Added SharedKernel, explicit IoC strategy, Domain exceptions, IDomainEventDispatcher contract, ISpecification&lt;T&gt; base, Behaviors subdivision, Architecture.Tests project |
+| v0.3 | Microservice-ready: Integration Events, Messaging layer (publishers + consumers), Outbox pattern, inter-service HTTP clients with resilience, updated Architecture tests for distributed boundaries |
